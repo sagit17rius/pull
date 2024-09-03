@@ -1,4 +1,5 @@
-DIR_NAME=${1:-"my_directory"}
+#!/bin/bash
+DIR_NAME="my_directory"
 
 if [ -d "$DIR_NAME" ]; then
   echo "Directory '$DIR_NAME' already exists."
