@@ -1,3 +1,0 @@
-
-  mkdir "DIR_NAME"
-  
