@@ -1,1 +1,19 @@
-echo "hello snehit!"
+pipeline{
+    agent any
+    environment{
+      PATH = "/opt/maven/"
+    }
+    stages{
+        stage("git checkout"){
+            steps{
+                git branch: 'main', url: 'https://github.com/sagit17rius/pull.git'
+            }
+        }
+	stage("maven build"){
+            steps{
+                sh "mvn clean package"
+            }
+        }
+
+    }
+}
